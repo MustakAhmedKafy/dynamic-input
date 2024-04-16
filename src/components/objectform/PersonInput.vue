@@ -10,8 +10,13 @@ const person = reactive({
 </script>
 <template>
   <div>
-    <p>{{ person.name }}</p>
-    <p>{{ person.email }}</p>
+    <p>Name: {{ person.name }}</p>
+    <p>Email: {{ person.email }}</p>
+   
+      <label for="">Your name</label> <br>
+      <input type="text" v-model="person.name">
+
+   <br> <br>
     <PersonComponent :person="person" />
 
     <!-- more dynamic -->
